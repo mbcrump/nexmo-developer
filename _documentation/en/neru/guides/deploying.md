@@ -28,7 +28,7 @@ app.get('/_/health', async (req, res) => {
 });
 ```
 
-You can use this as an opportunity to perform some checks of your own and have the platform restart your application for you automatically if it gets into a bad state, by not returning a 200 status.
+You can use this as an opportunity to perform some checks of your own and have the platform restart your application for you automatically if it gets into a bad state by not returning a 200 status within 30 seconds. 
 
 ## How to Deploy
 
