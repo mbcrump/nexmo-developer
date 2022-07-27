@@ -18,6 +18,18 @@ source: _partials/neru/manifest.md
 
 Project name is the unique namespace for your project which can contain many instances. Instance name is unique identifier for your instance. The name of the instance has no bearing on what environment your instance will be running, this is controlled by the `region`. `region` is where the instance will run. `entrypoint` gives the neru platform information on how to start your application You can learn more about the options available to you in the [configuration file guide](/neru/guides/manifest).
 
+## Health Check Route
+
+The NeRu platform expects a route, `/_/health`, to be available on your application which is used to check the health of your deployed application. If this route does not return a 200 status, your application will be restarted. If the route is missing it can cause your application to be infinitely restarted causing your deploy to fail. Here is an example if the route using `express.js`:
+
+```javascript
+app.get('/_/health', async (req, res) => {
+    res.sendStatus(200);
+});
+```
+
+You can use this as an opportunity to perform some checks of your own and have the platform restart your application for you automatically if it gets into a bad state, by not returning a 200 status.
+
 ## How to Deploy
 
 You can deploy using the NeRu CLI. To deploy, run:
