@@ -5,7 +5,6 @@ menu_weight: 1
 ---
 
 ```javascript
-const router = neru.Router();
 const session = neru.createSession();
 const state = session.getState();
 

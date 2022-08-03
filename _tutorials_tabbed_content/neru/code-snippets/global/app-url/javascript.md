@@ -7,5 +7,5 @@ menu_weight: 1
 ```javascript
 import { neru } from "neru-alpha";
 
-neru.getGlobalState();
+neru.getAppUrl();
 ```

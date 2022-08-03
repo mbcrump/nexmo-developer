@@ -14,7 +14,7 @@ Using a hash table name, you can store key-value pairs for retrieval later.
 
 ### Method Signature
 ```javascript
-hset(htable: string, keyValuePairs: [string, string][])
+hset(htable: string, keyValuePairs: any)
 ```
 
 ### Setting Hash Table Values

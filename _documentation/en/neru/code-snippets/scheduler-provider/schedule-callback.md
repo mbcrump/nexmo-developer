@@ -20,7 +20,7 @@ This function takes parameters to configure the scheduled callback:
 
 * `startAt`: (String) - The date to start the scheduled callback in ISO format.
 * `callback`: (String) - The route to be called.
-* `id`: (Optional String) - Identifier for the scheduled callback.
+* `id`: (Optional String) - Identifier for the scheduled callback, if not provided one will be generated. Use this to cancel a scheduler after created.
 * `interval`: (Optional `IntervalParams`) - If specified, the scheduled callback will repeat on this interval.
 * `payload`: (Optional Object) - Optional data to send to the callback.
 

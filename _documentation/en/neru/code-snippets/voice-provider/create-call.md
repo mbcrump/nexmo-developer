@@ -13,6 +13,12 @@ The Voice provider's `vapiCreateCall` function allows you to create an outbound 
 vapiCreateCall(from: Contact, to: Contact[], ncco: Record<string, unknown>[])
 ```
 
+### Types
+
+```partial
+source: _partials/neru/type-contact.md
+```
+
 ## Creating an Outbound Call
 
 ```tabbed_content

@@ -11,5 +11,5 @@ const messaging = new Messages(session);
 const vonageNumber = { type: "sms", number: "447700900000" };
 const from = { type: "sms", number: null }; 
 
-await messaging.listenEvents("onEvent", from, vonageNumber).execute();
+await messaging.onMessageEvents("onEvent", from, vonageNumber).execute();
 ```

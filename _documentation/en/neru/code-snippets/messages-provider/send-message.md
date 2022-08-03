@@ -38,7 +38,7 @@ send(message: BaseMessage)
 
 #### Types
 
-This function uses the NeRu `BaseMessage` type. Depending on your `message_type` you will need to use additional parameters:
+This function uses the NeRu `BaseMessage` type. Depending on your `message_type` you will need to use a `BaseMessage` subclass:
 
 `BaseMessage`:
 
@@ -47,20 +47,11 @@ This function uses the NeRu `BaseMessage` type. Depending on your `message_type`
 * `from`: (String) Your Vonage Number phone number in in the E.164 format or ID number, for use with Facebook Messenger.
 * `channel`: (String) The channel of the message, e.g. `sms`, `mms`, `whatsapp`, `messenger` or `viber_service`.
 
-For text add:
+For text (`SMSMessage`, `WhatsappTextMessage`) add:
 
 * `text`: (String) The text to be sent.
 
-For Image add an `image` object with the following:
-
-* `url`: (String) A URL to the image.
-* `caption`: (Optional String) A caption for the image.
-
-For Audio add an `audio` object with the following:
-
-* `url`: (String) A URL to the audio file.
-
-For MMS VCard add an `vcard` object with the following:
+For Image (`MMSImageMessage`, `WhatsappImageMessage`) add an `ImagePayload` object with the following:
 
 * `url`: (String) A URL to the image.
 * `caption`: (Optional String) A caption for the image.
@@ -75,10 +66,4 @@ source: _tutorials_tabbed_content/neru/code-snippets/messages/send-message
 
 ```tabbed_content
 source: _tutorials_tabbed_content/neru/code-snippets/messages/send-message-image
-```
-
-### Sending Audio
-
-```tabbed_content
-source: _tutorials_tabbed_content/neru/code-snippets/messages/send-message-audio
 ```

@@ -45,5 +45,5 @@ Conversation.playStop(playId: string, to?: string)
 This builds on top of the above snippet, and stops playing audio using the ID from `Conversation.playStream` response. You can use the `to` parameter to stop the audio for a specific conversation member.
 
 ```tabbed_content
-source: _tutorials_tabbed_content/neru/code-snippets/conversation/play-stream
+source: _tutorials_tabbed_content/neru/code-snippets/conversation/play-stop
 ```
